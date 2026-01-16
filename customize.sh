@@ -107,7 +107,4 @@ fi
 # Set Module permissions
 set_perm_recursive "$MODPATH" 0 0 0755 0644
 
-# Running the service early using busybox
-[ -f "$MODPATH/service.sh" ] && busybox sh "$MODPATH/service.sh" 2>&1
-
 ui_print "? Please uninstall this module before dirty-flashing/updating the ROM."
