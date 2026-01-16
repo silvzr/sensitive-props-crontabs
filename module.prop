@@ -1,6 +1,7 @@
 id=sensitive_props
 name=Sensitive Props Mod
-version=v6.5.0-hexpatch
+version=v6.5.0-hexpatch+crontabs
 versionCode=60507
-author=@T3SL4
-description=Reset sensitive properties to a safe state and try to bypass Safetynet / Play Integrity.
+author=HuskyDG, @T3SL4 & @Aarifmonu hexpatches, xx's crontabs
+description=Reset sensitive properties to safe state.
+
