@@ -63,6 +63,13 @@ done
 # Outdated PlayIntegrity pixelprops fix
 getprop | grep -E "pihook|pixelprops|eliteprops|spoof.gms" | sed -E "s/^\[(.*)\]:.*/\1/" | while IFS= read -r prop; do hexpatch_deleteprop "$prop"; done
 
+# Altered VBMeta fix
+missing_resetprop ro.boot.vbmeta.avb_version 1.2
+missing_resetprop ro.boot.vbmeta.hash_alg sha256
+missing_resetprop ro.boot.vbmeta.size 8192
+force_resetprop ro.boot.vbmeta.device_state locked
+force_resetprop ro.boot.vbmeta.invalidate_on_error yes
+
 ### General adjustments ###
 
 # Process prefixes for build properties
