@@ -97,6 +97,10 @@ check_resetprop sys.oem_unlock_allowed 0
 check_resetprop ro.oem_unlock_supported 0
 check_resetprop net.tethering.noprovisioning true
 
+# ADBD/adb_root status spoofing
+check_resetprop init.svc.adbd stopped
+hexpatch_deleteprop init.svc.adb_root
+
 # Init.rc adjustment
 check_resetprop init.svc.flash_recovery stopped
 
